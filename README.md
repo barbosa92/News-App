@@ -36,3 +36,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Herramientas utilizadas en este proyecto:
+-   Pico.css para añadir estilos mediante framework?
+
+Apuntes:
+-   El componente Link de Next nos permite navegar entre páginas como "Single Page Application", de modo que cuando cambiamos de página, el navegador solo carga el archivo que necesita en lugar de recargar toda la aplicación con el JS. Al hacerse así debe hacer uso del "History.push"
+-   Para navegar entre páginas no utilizar NUNCA un "Router.push". Utilizar un Link en esos casos. En las únicas ocasiones en que tiene sentido es cuando se trata de una navegación programática, como cuando queremos hacer login, ya que queremos enviar al usuario allí como respuesta de una acción del mismo.
+-   Next permite realizar client y server side rendenring al mismo tiempo. Permitiendo que la página se renderice en el servidor y sea más favorable para temas de SEO ya que Google solo tendrá que leer el HTML, en lugar de tener que descargar tu JS, levantar un servidor para renderizar tu página y después leerlo. Ver este vídeo para profundizar(https://www.youtube.com/watch?v=YfkJyRFvP1s)
+-   El fetching de datos en el servidor siempre se va a realizar más rápido que en el cliente.
+-   Hidratar:? (Al hacer fetching en el lado del seridor, se pasa la información al cliente como un objeto Curso Next.js 12 -> 56:09 )
+-   <Image> Es recomendable especificar el width y el height para que ocupe solo el tamaño de la imagen y no de saltos en el contenido (Curso Next.js 12 -> 1:25:32), esto es importante para el CLS (Cumule Layout Shift)
